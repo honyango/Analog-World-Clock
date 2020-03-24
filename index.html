@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>A Digital Analog Clock</title>
+    <title>Analog World Clock</title>
     <link rel="stylesheet" href="style.css" type="text/css" media="all">
     <script src="script.js" defer></script>
+    <script src="time.js"></script>
 </head>
 
-<body style="background-color:silver;">
-  <!--<h1 style="margin: 70px; border: 1px solid #000;">Local Time&nbsp;&nbsp;&nbsp;&nbsp;USA Time       India Time       London Time</h1>-->
+<body style="background-color:silver;" onload="startTime()">
 <main class="main">
     <div class="clockbox" style="background-color:#48484A; margin: 70px; border: 3px solid #000;">
         <svg id="clock" xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 600 600">
@@ -33,6 +33,7 @@
             </g>
         </svg>
         <h2 style="color:white" align="center">Local Time</h2>
+        <h2 id="time1" style="color:black" align="center"></h2>
     </div>
     <div class="clockbox" style="background-color:#48484A; margin: 70px; border: 3px solid #000;">
         <svg id="clock" xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 600 600">
@@ -55,6 +56,7 @@
             </g>
         </svg>
         <h2 style="color:white" align="center">New York Time</h2>
+        <h2 id="time2" style="color:black" align="center"></h2>
     </div>
   <div class="clockbox" style="background-color:#48484A; margin: 70px; border: 3px solid #000;">
         <svg id="clock" xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 600 600">
@@ -77,6 +79,7 @@
             </g>
         </svg>
         <h2 style="color:white" align="center">Kolkata Time</h2>
+        <h2 id="time3" style="color:black" align="center"></h2>
     </div>
     <div class="clockbox" style="background-color:#48484A; margin: 70px; border: 3px solid #000;">
         <svg id="clock" xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 600 600">
@@ -99,9 +102,8 @@
             </g>
         </svg>
         <h2 style="color:white" align="center">London Time</h2>
+        <h2 id="time4" style="color:black" align="center"></h2>
     </div>
 </main>
-
 </body>
-
 </html>

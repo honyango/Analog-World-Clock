@@ -10,19 +10,16 @@ const INDIASECONDHAND = document.querySelector("#Indiasecond");
 const LONDONHOURHAND = document.querySelector("#Londonhour");
 const LONDONMINUTEHAND = document.querySelector("#Londonminute");
 const LONDONSECONDHAND = document.querySelector("#Londonsecond");
-var date = new Date();
+var date = new Date(); // For local time
 //----------get time from different timezones-------------------
 var londonTime = new Date().toLocaleString("en-US", {timeZone: "Europe/London"});
 londonTime = new Date(londonTime);
-console.log('London time: '+londonTime.toLocaleString())
 
 var usaTime = new Date().toLocaleString("en-US", {timeZone: "America/New_York"});
 usaTime = new Date(usaTime);
-console.log('USA time: '+usaTime.toLocaleString())
 
 var indiaTime = new Date().toLocaleString("en-US", {timeZone: "Asia/Kolkata"});
 indiaTime = new Date(indiaTime);
-console.log('India time: '+indiaTime.toLocaleString())
 //--------------------------------------------------------------
 let hr = date.getHours();
 let min = date.getMinutes();
@@ -36,10 +33,6 @@ let indiasec = indiaTime.getSeconds();
 let londonhr = londonTime.getHours();
 let londonmin = londonTime.getMinutes();
 let londonsec = londonTime.getSeconds();
-console.log("Hour: " + hr + " Minute: " + min + " Second: " + sec);
-console.log("Hour: " + usahr + " Minute: " + usamin + " Second: " + usasec);
-console.log("Hour: " + londonhr + " Minute: " + londonmin + " Second: " + londonsec);
-console.log("Hour: " + indiahr + " Minute: " + indiamin + " Second: " + indiasec);
 
 let hrPosition = (hr*360/12)+(min*(360/60)/12);
 let minPosition = (min*360/60)+(sec*(360/60)/60);
